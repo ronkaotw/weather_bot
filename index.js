@@ -198,10 +198,6 @@ bot.on("message", async (msg) => {
   }
 });
 
-// app.listen(PORT, () => {
-//     console.log(`伺服器啟動在 http://localhost:${PORT}`)
-// })
-
-// 啟動 Webhook 模式以支援 Heroku（Heroku 會定期清除空閒應用）
-process.once("SIGINT", () => bot.stop("SIGINT"));
-process.once("SIGTERM", () => bot.stop("SIGTERM"));
+app.listen(PORT, () => {
+  console.log(`伺服器啟動在 http://localhost:${PORT}`);
+});
