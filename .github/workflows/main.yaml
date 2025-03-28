@@ -13,12 +13,16 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+          echo "Heroku CLI installed"
       - name: Install dependencies
         run: |
           npm install
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "telegram-airport-weather-bot"
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
