@@ -1,4 +1,5 @@
-name: Deploy to Heroky
+name: Deploy to Heroku
+
 on:
   push:
     branches:
@@ -8,11 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies (Node.js)
+        run: npm install
+        # For Python, use: pip install -r requirements.txt
+
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           branch: "main"
-          heroku_api_key: HRKU-581d7df3-fd6d-42e7-b9ea-7bd764420057
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "telegram-airport-weather-bot"
-          heroku_email: aaronkao88@gmail.com
-          # HEROKU_API_KEY and HEROKU_EMAIL will need to be set in repository secrets
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
