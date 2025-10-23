@@ -191,9 +191,9 @@ bot.on("message", async (msg) => {
     bot.sendMessage(
       chatId,
       `開發人員名稱: Aaron
-        開發人員GitHub: @uTIstIbL
-        開發人員網站: ronkao.tw
-        開發人員linkedin: www.linkedin.com/in/aaron-kao884b2319a`
+       開發人員GitHub: @ronkaotw
+       開發人員網站: https://ronkao.tw
+       開發人員linkedin: https://www.linkedin.com/in/ronkaotw/`
     );
   }
 });
