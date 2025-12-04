@@ -42,6 +42,7 @@ Once the bot/server is running, you can query local airport weather, METAR, and 
 
 Example Telegram commands:
 
+```bash
 /airport [airport_code] → get airport info
 
 /metar [airport_code] → get METAR report
@@ -51,6 +52,7 @@ Example Telegram commands:
 /airmet [airport_code] → get airmet weather
 
 /dev [airport_code] → get dev info
+```
 
 ## Notes
 
@@ -73,5 +75,6 @@ CheckWX API (for METAR/TAF data)
 Optional: nodemon for development
 
 ## Author
-
+```bash
 @ronkaotw
+```
