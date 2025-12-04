@@ -20,7 +20,7 @@ Telegram bot integration for quick access
 
 Clone the repository
 
-git clone git@github.com:uTIstIbL/weather_bot.git
+git clone git@github.com:ronkaotw/weather_bot.git
 cd weather_bot
 
 
