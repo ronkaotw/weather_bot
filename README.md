@@ -20,6 +20,7 @@ Telegram bot integration for quick access
 
 Clone the repository
 
+```bash
 git clone git@github.com:ronkaotw/weather_bot.git
 cd weather_bot
 
@@ -34,8 +35,8 @@ npm install
 npm run start
 ### or for development with auto-reload
 nodemon index.js
-
-📝 Usage
+```
+## Usage
 
 Once the bot/server is running, you can query local airport weather, METAR, and TAF.
 
