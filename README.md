@@ -1,31 +1,76 @@
-# Aaron 天氣機場資訊 Telegram Api
+# Weather & Airport Info Telegram Bot
 
-為了方便查詢當地機場的天氣資訊，特別開發了這款天氣的 API 供給大家做使用，裡面的功能目前不多
-僅有查詢當地天氣資訊、Metar、以及 Taf，歡迎大家多多使用。
+A Telegram bot and API designed to provide convenient local airport weather information. Currently, it supports retrieving current weather, METAR, and TAF data for airports.
 
-# 開始使用
-* 下載檔案
-```
+This project is ideal for developers who want to integrate aviation weather information into their apps or Telegram bots.
+
+## Features
+
+Query local airport weather information
+
+Retrieve METAR reports
+
+Retrieve TAF forecasts
+
+Easy-to-use API for developers
+
+Telegram bot integration for quick access
+
+## Installation & Setup
+
+Clone the repository
+
 git clone git@github.com:uTIstIbL/weather_bot.git
 cd weather_bot
-```
 
-* 啟動伺服器
-```
+
+Install dependencies
+
 npm install
+
+
+## Start the server
+
 npm run start
-or
+### or for development with auto-reload
 nodemon index.js
-```
 
-# 作者
-* @uTIstIbL
+📝 Usage
 
-# 注意
-* Airmet 僅能在美洲地區做使用，其他地區似乎正在開發中，尚未有任何資料。
+Once the bot/server is running, you can query local airport weather, METAR, and TAF.
 
-# 參考資料
-* https://github.com/yagop/node-telegram-bot-api/tree/master
-* https://www.checkwxapi.com/
- 
+Example Telegram commands:
 
+/airport [airport_code] → get airport info
+
+/metar [airport_code] → get METAR report
+
+/taf [airport_code] → get TAF forecast
+
+/airmet [airport_code] → get airmet weather
+
+/dev [airport_code] → get dev info
+
+## Notes
+
+AIRMET data is currently only available for the Americas. Other regions are under development.
+
+Please refer to the following resources for API limitations and reference:
+
+node-telegram-bot-api
+
+CheckWX API
+
+## Tech Stack
+
+Node.js
+
+Telegram Bot API (node-telegram-bot-api)
+
+CheckWX API (for METAR/TAF data)
+
+Optional: nodemon for development
+
+## Author
+
+@ronkaotw
